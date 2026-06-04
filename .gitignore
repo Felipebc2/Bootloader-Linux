@@ -1,0 +1,9 @@
+# artefatos de build
+*.o
+bootloader
+disco.img
+
+# CLAUDE
+.claude/
+CLAUDE.md
+ORQUESTRACAO.md
