@@ -16,7 +16,7 @@ make debug   # QEMU pausado + servidor GDB :1234
 
 ## Progresso
 - [x] Fase 0 — Setup do repositório
-- [ ] Fase 1 — Hello World (512 B + assinatura)
+- [x] Fase 1 — Hello World (512 B + assinatura)
 - [ ] Fase 2 — Interrupção de vídeo
 - [ ] Fase 3 — Carregamento do kernel + salto
 - [ ] Fase 4 — Verificador da Matrícula (VM)
