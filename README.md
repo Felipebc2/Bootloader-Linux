@@ -3,8 +3,7 @@
 Bootloader de 512 bytes em modo real que carrega um kernel para `0x7E00`,
 insere o Verificador da Matrícula em `AX` e salta para o kernel.
 
-- **Disciplina:** Sistemas Operacionais — Prof. Jeremias Moreira Gomes — 2026/1
-- **Aluno:** Felipe
+- **Disciplina:** Sistemas Operacionais
 - **Ambiente:** Ubuntu 24.04.3 LTS (WSL2) — gcc / binutils / qemu / coreutils
 
 ## Como executar
