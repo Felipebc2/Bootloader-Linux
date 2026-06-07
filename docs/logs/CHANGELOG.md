@@ -25,3 +25,10 @@ Uma entrada por fase concluída (Conventional Commits + gitmoji).
 - Sequencia da secao 4.3: `cli` -> zera DS/ES/SS -> `sp=0x7c00` -> `sti` -> reset do disco (`int 0x13`, AH=0) -> `ES:BX=0x7E0:0` -> le 4 setores a partir do setor 2 (`int 0x13`, AH=2, AL=4, CH=0, CL=2, DH=0) -> `mov ax, 0x0000` (VM na Fase 4) -> `jmp 0x7E00`. `DL` nao e tocado.
 - `jmp 0x7E00` montado como salto relativo (`e9 d6 01`); conferido via objdump que resolve para 0x7E00 com base de link 0x7c00.
 - `make check`: 512 bytes exatos, termina em `55 aa`.
+
+## Fase 4 — Verificador da Matrícula (VM)
+- `feat: ➕ cálculo e inserção do verificador da matrícula (VM)`
+- `scripts/calc_vm.py` calcula `VM_A` (eq. 1 oficial) e `VM_B` (alternativa) a partir da matricula, imprimindo decimal e hex.
+- Matricula `2311292` -> `VM_A = 1896 = 0x0768` (inserido em AX) e `VM_B = 2129 = 0x0851` (guardado).
+- `bootloader.s`: `mov ax, 0x0000` -> `mov ax, 0x0768`.
+- `make check`: 512 bytes exatos, termina em `55 aa`.
