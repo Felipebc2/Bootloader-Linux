@@ -13,3 +13,9 @@ Uma entrada por fase concluída (Conventional Commits + gitmoji).
 - `feat: ✨ bootloader hello world (512 bytes + assinatura)`
 - `bootloader.s` em modo real (`.code16`): `_start` em loop infinito, `.fill` ate 510 bytes e assinatura `0x55 0xaa`.
 - `make check`: 512 bytes exatos, termina em `55 aa`.
+
+## Fase 2 — Interrupção de vídeo
+- `feat: ✨ impressão de caractere via int 0x10`
+- `bootloader.s` imprime `A` (0x41) via teletype da BIOS (`int 0x10`, `AH=0x0E`, `BH=0x00`) e faz `hlt`.
+- Fixada `.intel_syntax noprefix` (GNU `as` usa AT&T por padrao) para o codigo bater com a notacao da documentacao.
+- `make check`: continua 512 bytes exatos, termina em `55 aa`.
