@@ -32,3 +32,9 @@ Uma entrada por fase concluída (Conventional Commits + gitmoji).
 - Matricula `2311292` -> `VM_A = 1896 = 0x0768` (inserido em AX) e `VM_B = 2129 = 0x0851` (guardado).
 - `bootloader.s`: `mov ax, 0x0000` -> `mov ax, 0x0768`.
 - `make check`: 512 bytes exatos, termina em `55 aa`.
+
+## Fase 5 — Montagem do disco + execução
+- `build: 📦 montagem do disco e execução no QEMU`
+- `make disk`: `disco.img` de 720 KB com bootloader no setor 0 e kernel a partir do setor 2 (`bs=512 seek=1`).
+- Layout conferido: offset `0x1fe` = `55 aa` (assinatura); offset `0x200` = `e9 ca 02` (inicio do kernel).
+- `disco.img` e git-ignored (artefato de build); execucao via `make run` / `make run-curses`.

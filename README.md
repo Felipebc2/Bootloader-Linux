@@ -20,7 +20,7 @@ make debug   # QEMU pausado + servidor GDB :1234
 - [x] Fase 2 — Interrupção de vídeo (imprime `A`)
 - [x] Fase 3 — Carregamento do kernel + salto
 - [x] Fase 4 — Verificador da Matrícula (VM)
-- [ ] Fase 5 — Montagem do disco + execução
+- [x] Fase 5 — Montagem do disco + execução
 - [ ] Fase 6 — Validação + resposta capturada
 - [ ] Fase 7 — Entrega
 
