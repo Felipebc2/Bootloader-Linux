@@ -38,3 +38,14 @@ Uma entrada por fase concluída (Conventional Commits + gitmoji).
 - `make disk`: `disco.img` de 720 KB com bootloader no setor 0 e kernel a partir do setor 2 (`bs=512 seek=1`).
 - Layout conferido: offset `0x1fe` = `55 aa` (assinatura); offset `0x200` = `e9 ca 02` (inicio do kernel).
 - `disco.img` e git-ignored (artefato de build); execucao via `make run` / `make run-curses`.
+
+## Fase 6 — Validação + captura da resposta
+- `docs: 📝 captura da resposta final`
+- QEMU exibiu a resposta com o VM `0x0768` correto; resposta submetida e validada na plataforma do professor.
+- `RESPOSTA.txt` criado com `printf '%s'`: `QFPKQJMEFNCEMEID` (16 bytes, linha unica, sem `\n` final / sem `0a`).
+
+## Fase 7 — Empacotamento final
+- `docs: 🚀 finalização e instruções de entrega`
+- Resposta `QFPKQJMEFNCEMEID` submetida e aceita na plataforma do professor.
+- README e `.gitignore` revisados; arquivos internos de planejamento movidos para exclusao local (`.git/info/exclude`).
+- Entregaveis: `RESPOSTA.txt` + `bootloader.s`.
